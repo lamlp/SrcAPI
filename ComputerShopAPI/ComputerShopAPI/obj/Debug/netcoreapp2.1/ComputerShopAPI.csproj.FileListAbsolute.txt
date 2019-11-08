@@ -1,0 +1,16 @@
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\bin\Debug\netcoreapp2.1\ComputerShopAPI.deps.json
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\bin\Debug\netcoreapp2.1\ComputerShopAPI.runtimeconfig.json
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\bin\Debug\netcoreapp2.1\ComputerShopAPI.runtimeconfig.dev.json
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\bin\Debug\netcoreapp2.1\ComputerShopAPI.dll
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\obj\Debug\netcoreapp2.1\ComputerShopAPI.csprojAssemblyReference.cache
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\obj\Debug\netcoreapp2.1\ComputerShopAPI.RazorAssemblyInfo.cache
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\obj\Debug\netcoreapp2.1\ComputerShopAPI.RazorAssemblyInfo.cs
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\obj\Debug\netcoreapp2.1\ComputerShopAPI.AssemblyInfoInputs.cache
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\obj\Debug\netcoreapp2.1\ComputerShopAPI.AssemblyInfo.cs
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\obj\Debug\netcoreapp2.1\ComputerShopAPI.RazorTargetAssemblyInfo.cache
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\bin\Debug\netcoreapp2.1\ComputerShopAPI.pdb
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\obj\Debug\netcoreapp2.1\ComputerShopAPI.dll
+C:\Users\lnguyen259\source\repos\ComputerShopAPI\ComputerShopAPI\obj\Debug\netcoreapp2.1\ComputerShopAPI.pdb
