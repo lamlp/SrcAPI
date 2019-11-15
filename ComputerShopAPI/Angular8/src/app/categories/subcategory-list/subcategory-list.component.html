@@ -1,0 +1,16 @@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+                <th>SubCategory Name</th>
+                <th>Category Id</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let pd of service.listSubCategory">
+                    <td (click)="populateForm(pd)">{{pd.SubCategoryName}}</td>
+                    <td (click)="populateForm(pd)">{{pd.CategoryId}}</td>
+                    <td><span class="glyphicon glyphicon-trash" aria-hidden="true" (click)="onDelete(pd.SubCategoryId)"></span></td>
+                    
+                </tr>
+    </tbody>
+</table>

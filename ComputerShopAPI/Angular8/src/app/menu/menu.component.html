@@ -1,0 +1,7 @@
+<div class="dropdown" *ngFor="let mn of service_category.listCategory">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{mn.CategoryName}}
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+        <li *ngFor="let smn of filterSubcategory(mn.CategoryId)"><a href="/subcategories/{{smn.SubCategoryId}}" >{{smn.SubCategoryName}}</a></li>
+    </ul>
+</div>

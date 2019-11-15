@@ -1,0 +1,21 @@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+                <th>Product Name</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Descriptions</th>
+                <th>Cart</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let pd of service.listProduct">
+                    <td>{{pd.ProductName}}</td>
+                    <td><img src="assets/Image/{{pd.Image}}" class="img-responsive" alt="Image"></td>
+                    <td>{{pd.Price}}</td>
+                    <td>{{pd.Descriptions}}</td>
+                    <!-- <td><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" (click)="onAddToCart(pd)"></span></td> -->
+                    <td><a href="/cart/{{pd.ProductId}}">BUY</a></td>
+                </tr>
+    </tbody>
+</table>

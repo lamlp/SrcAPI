@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ComputerShopApiService } from 'src/app/shared/computershopapi.service';
+import { Customer } from 'src/app/models/customer.model';
+import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
   selector: 'app-customer-list',
@@ -8,10 +9,28 @@ import { ComputerShopApiService } from 'src/app/shared/computershopapi.service';
 })
 export class CustomerListComponent implements OnInit {
 
-  constructor(private service:ComputerShopApiService) { }
+  constructor(private service: CustomerService) { }
 
   ngOnInit() {
     this.service.getCustomer();
   }
 
+  populateForm(pd:Customer){
+    this.service.formDataCustomer = Object.assign({},pd);
+  }
+
+  onDelete(CustomerId)
+  {
+    if (confirm('Are you sure?'))
+    this.service.deleteCustomer(CustomerId)
+    .subscribe(
+      res=>{
+        this.service.getCustomer();
+        alert('Delete success');
+      },
+      err=>{
+        console.log(err);
+      }
+    )
+  }
 }

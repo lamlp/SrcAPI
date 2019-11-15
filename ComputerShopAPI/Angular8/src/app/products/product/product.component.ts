@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ComputerShopApiService } from 'src/app/shared/computershopapi.service';
 import { NgForm } from '@angular/forms';
+import { ProductService } from "src/app/services/product.service";
+import { SubCategoryService } from 'src/app/services/subcategory.service';
 
 @Component({
   selector: 'app-product',
@@ -9,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private service: ComputerShopApiService) { }
+  constructor(private service: ProductService, private servicesubcategory : SubCategoryService) { }
 
   ngOnInit() {
     this.resetForm();
@@ -27,6 +28,11 @@ export class ProductComponent implements OnInit {
       Descriptions: '',
       SubCategoryId: 0
     }
+    this.servicesubcategory.formDataSubCategory = {
+      SubCategoryId: 0,
+      SubCategoryName: '',
+      CategoryId: 0
+    }
   }
 
   onSubmit(form:NgForm)
@@ -37,7 +43,7 @@ export class ProductComponent implements OnInit {
     this.updateValue(form);
   }
 
-  insertValue(form: NgForm){
+  insertValue(form: NgForm) {
     this.service.postProduct().subscribe(
       res => {
         this.resetForm(form);

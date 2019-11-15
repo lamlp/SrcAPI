@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ComputerShopApiService } from 'src/app/shared/computershopapi.service'
-import { Product } from 'src/app/shared/computershopapi.model';
+import { Product } from 'src/app/models/product.model';
+import { ProductService } from "src/app/services/product.service";
+
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Product } from 'src/app/shared/computershopapi.model';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor(private service: ComputerShopApiService) { }
+  constructor(private service: ProductService) { }
 
   ngOnInit() {
     this.service.getProduct();

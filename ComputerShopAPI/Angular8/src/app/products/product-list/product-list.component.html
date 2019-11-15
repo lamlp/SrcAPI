@@ -1,13 +1,21 @@
-<table class="table table-hover">
-        <td>Product Name</td>
-        <td>Image</td>
-        <td>Price</td>
-        <td>Descriptions</td>
-    <tr *ngFor="let pd of service.listProduct">
-        <td (click)="populateForm(pd)">{{pd.ProductName}}</td>
-        <td (click)="populateForm(pd)">{{pd.Image}}</td>
-        <td (click)="populateForm(pd)">{{pd.Price}}</td>
-        <td (click)="populateForm(pd)">{{pd.Descriptions}}</td>
-        <td><i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.ProductId)"></i></td>
-    </tr>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+                <th>Product Name</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Descriptions</th>
+                <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let pd of service.listProduct">
+                    <td (click)="populateForm(pd)">{{pd.ProductName}}</td>
+                    <td (click)="populateForm(pd)"><img src="assets/Image/{{pd.Image}}" class="img-responsive" alt="Image"></td>
+                    <td (click)="populateForm(pd)">{{pd.Price}}</td>
+                    <td (click)="populateForm(pd)">{{pd.Descriptions}}</td>
+                    <td><span class="glyphicon glyphicon-trash" aria-hidden="true" (click)="onDelete(pd.ProductId)"></span></td>
+                    
+            </tr>
+    </tbody>
 </table>
