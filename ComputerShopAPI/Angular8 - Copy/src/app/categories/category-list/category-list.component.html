@@ -1,0 +1,14 @@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+                <th>Category Name</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let pd of service.listCategory">
+                    <td (click)="populateForm(pd)">{{pd.CategoryName}}</td>
+                    <td><span class="glyphicon glyphicon-trash" aria-hidden="true" (click)="onDelete(pd.CategoryId)"></span></td>
+                    
+                </tr>
+    </tbody>
+</table>

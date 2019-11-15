@@ -1,0 +1,9 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="CategoryId" [value]="service.formDataCategory.CategoryId">
+    <label>Category Name</label>
+    <input name="CategoryFName" #CategoryName="ngModel" [(ngModel)]="service.formDataCategory.CategoryName"
+        class="form-control" required>
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+    <button type="button" class="btn btn-warning" (click)=resetForm()>Reset</button>
+</form>

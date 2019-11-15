@@ -1,0 +1,16 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="SubCategoryId" [value]="service.formDataSubCategory.SubCategoryId">
+    <label>SubCategory Name</label>
+    <input name="SubCategoryName" #SubCategoryName="ngModel" [(ngModel)]="service.formDataSubCategory.SubCategoryName"
+        class="form-control" required>
+    <label>Category Id</label>
+    <select #CategoryId="ngModel" [(ngModel)]="service.formDataSubCategory.CategoryId" name="CategoryId" class="form-control" required>
+        <option *ngFor="let c of servicecategory.listCategory" [value]="c.CategoryId">{{c.CategoryName}}</option>
+    </select>
+<!--     <input name="CategoryId" #CategoryId="ngModel" [(ngModel)]="service.formDataSubCategory.CategoryId"
+        class="form-control" required>
+ -->
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+    <button type="button" class="btn btn-warning" (click)=resetForm()>Reset</button>
+</form>

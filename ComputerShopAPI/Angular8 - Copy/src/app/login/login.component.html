@@ -1,0 +1,16 @@
+<form>
+    <legend>Login</legend>
+
+    <div class="form-group">
+        <label for="">Username</label>
+        <input type="text" class="form-control" #Account>
+    </div>
+
+    <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" class="form-control" #Password>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary" (click)="onLogin(Account.value , Password.value)">Login</button>
+</form>

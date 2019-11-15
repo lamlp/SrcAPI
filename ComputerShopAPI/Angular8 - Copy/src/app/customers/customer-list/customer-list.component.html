@@ -1,0 +1,32 @@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Account</th>
+            <th>Password</th>
+            <th>CusName</th>
+            <th>BirthDay</th>
+            <th>Gender</th>
+            <th>PersonalId</th>
+            <th>Address</th>
+            <th>PhoneNumber</th>
+            <th>Email</th>
+            <th>CusType</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pd of service.listCustomer">
+            <td (click)=populateForm(pd)>{{pd.Account}}</td>
+            <td (click)=populateForm(pd)>{{pd.Password}}</td>
+            <td (click)=populateForm(pd)>{{pd.CusName}}</td>
+            <td (click)=populateForm(pd)>{{pd.BirthDay}}</td>
+            <td (click)=populateForm(pd)>{{pd.Gender}}</td>
+            <td (click)=populateForm(pd)>{{pd.PersonalId}}</td>
+            <td (click)=populateForm(pd)>{{pd.Address}}</td>
+            <td (click)=populateForm(pd)>{{pd.PhoneNumber}}</td>
+            <td (click)=populateForm(pd)>{{pd.Email}}</td>
+            <td (click)=populateForm(pd)>{{pd.CusType}}</td>
+            <td><span class="glyphicon glyphicon-trash" aria-hidden="true" (click)="onDelete(pd.CusId)"></span></td>
+        </tr>
+    </tbody>
+</table>

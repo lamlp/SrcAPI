@@ -1,0 +1,44 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="CusId" [value]="service.formDataCustomer.CusId">
+    <label>Account</label>
+    <input type="text" class="form-control" name="Account" #Account="ngModel"
+        [(ngModel)]="service.formDataCustomer.Account" required>
+    <label>Password</label>
+    <input type="text" class="form-control" name="Password" #Password="ngModel"
+        [(ngModel)]="service.formDataCustomer.Password" required>
+    <label>CusName</label>
+    <input type="text" class="form-control" name="CusName" #CusName="ngModel"
+        [(ngModel)]="service.formDataCustomer.CusName" required>
+    <label>BirthDay</label>
+    <input type="text" class="form-control" name="BirthDay" #BirthDay="ngModel"
+        [(ngModel)]="service.formDataCustomer.BirthDay" required>
+    <label>Gender</label>
+    <select #Gender="ngModel" [(ngModel)]="service.formDataCustomer.Gender" name="Gender" class="form-control" required>
+        <option [value]="true">Male</option>
+        <option [value]="false">Female</option>
+    </select>
+    <label>PersonalId</label>
+    <input type="text" class="form-control" name="PersonalId" #PersonalId="ngModel"
+        [(ngModel)]="service.formDataCustomer.PersonalId" required>
+    <label>Address</label>
+    <input type="text" class="form-control" name="Address" #Address="ngModel"
+        [(ngModel)]="service.formDataCustomer.Address" required>
+    <label>PhoneNumber</label>
+    <input type="text" class="form-control" name="PhoneNumber" #PhoneNumber="ngModel"
+        [(ngModel)]="service.formDataCustomer.PhoneNumber" required>
+    <label>Email</label>
+    <input type="text" class="form-control" name="Email" #Email="ngModel" [(ngModel)]="service.formDataCustomer.Email"
+        required>
+    <label>CusType</label>
+    <!-- <input type="text" class="form-control" name="CusType" #CusType="ngModel"
+            [(ngModel)]="service.formDataCustomer.CusType" required> -->
+    <select #CusType="ngModel" [(ngModel)]="service.formDataCustomer.CusType" name="CusType" class="form-control"
+        required>
+        <option [value]="true">VIP</option>
+        <option [value]="false">Normal</option>
+    </select>
+
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+    <button type="button" class="btn btn-warning" (click)=resetForm()>Reset</button>
+</form>

@@ -1,0 +1,19 @@
+<table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                    <th>Product Name</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Descriptions</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let pd of service.products">
+                        <td>{{pd?.ProductName}}</td>
+                        <td><img src="assets/Image/{{pd?.Image}}" class="img-responsive" alt="Image"></td>
+                        <td>{{pd?.Price}}</td>
+                        <td>{{pd?.Descriptions}}</td>
+                    </tr>
+        </tbody>
+    </table>
+    

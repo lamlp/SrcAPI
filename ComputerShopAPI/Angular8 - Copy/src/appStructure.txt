@@ -1,0 +1,17 @@
+* src
++---* app
+|   +---* products
+|   |   |--products.component.ts|.html
+|   |    +--* product
+|   |    |  |--product.component.ts|.html
+|   |    |
+|   |    +--* product-list
+|   |    |  |--product-list.component.ts|.html
+|   |    |
+|   |    +--* shared
+|   |    |--product.service.ts
+|   |    |--product.model.ts
+|   |
+|   |--app.module.ts
+|   |
+|--index.html

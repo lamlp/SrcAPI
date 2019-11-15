@@ -1,0 +1,29 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="ProductId" [value]="service.formDataProduct.ProductId">
+    <label>Product Name</label>
+    <input name="ProductName" #ProductName="ngModel" [(ngModel)]="service.formDataProduct.ProductName"
+        class="form-control" required>
+
+    <label>Image</label>
+    <input name="Image" #Image="ngModel" [(ngModel)]="service.formDataProduct.Image" class="form-control"
+        placeholder="Image" required>
+    <label>Price</label>
+    <input name="Price" #Price="ngModel" [(ngModel)]="service.formDataProduct.Price" class="form-control"
+        placeholder="Price" required>
+    <label>Descriptions</label>
+    <input name="Descriptions" #Descriptions="ngModel" [(ngModel)]="service.formDataProduct.Descriptions"
+        class="form-control" placeholder="Descriptions">
+    <label>Sub Category Id</label>
+<!--     <input name="SubCategoryId" #SubCategoryId="ngModel" [(ngModel)]="service.formDataProduct.SubCategoryId"
+        class="form-control" placeholder="Sub Category ID" required> -->
+    <select name="SubCategoryId" #SubCategoryId="ngModel" [(ngModel)]="service.formDataProduct.SubCategoryId"
+    class="form-control" required>
+    <option *ngFor="let c of servicesubcategory.listSubCategory" [value]="c.SubCategoryId">{{c.SubCategoryName}}</option>
+    </select>
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+    
+    <button type="button" class="btn btn-warning" (click)=resetForm()>Reset</button>
+    
+
+</form>

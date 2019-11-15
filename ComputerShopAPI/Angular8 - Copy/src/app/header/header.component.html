@@ -1,0 +1,44 @@
+<ul class="nav navbar-nav">
+  <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true }"><a [routerLink]="['/']">Home</a></li>
+  <li routerLinkActive="active"><a [routerLink]="['/product']">Product</a></li>
+  <li routerLinkActive="active"><a [routerLink]="['/customer']">Customer</a></li>
+  <li routerLinkActive="active"><a [routerLink]="['/categories']">Categories</a></li>
+  <li routerLinkActive="active"><a [routerLink]="['/cart']">Cart</a></li>
+  <li routerLinkActive="active" class="{{check ? '' : 'disabled'}}"><a [routerLink]="['/login']">Login</a></li>
+  <li routerLinkActive="active" class="{{check ? 'disabled' : ''}}"><a (click)="logout()">Logout</a></li>
+</ul>
+
+<!-- <ul class="nav navbar-nav">
+  <li><a>Laptop</a>
+    <ul>
+      <li><a href="">Dell</a></li>
+      <li><a href="">Asus</a></li>
+    </ul>
+  </li>
+  <li><a>Linh Kiện</a>
+    <ul>
+      <li><a href="">RAM</a></li>
+      <li><a href="">Chuột</a></li>
+      <li><a href="">Bàn Phím</a></li>
+      <li><a href="">Ổ Cứng</a></li>
+    </ul>
+  </li>
+  <li><a>Test</a>
+    <ul>
+      <li><a href="">TestSub</a></li>
+    </ul>
+  </li>
+  <li><a>Test2</a>
+    <ul>
+      <li><a href="">TestSub2</a></li>
+    </ul>
+  </li>
+  <li><a>Test3</a>
+    <ul>
+      <li><a href="">TestSub3</a></li>
+    </ul>
+  </li>
+</ul> -->
+
+
+  

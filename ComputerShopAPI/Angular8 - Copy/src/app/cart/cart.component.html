@@ -1,0 +1,29 @@
+<h3>Cart Info</h3>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <!-- <th>Option</th> -->
+            <th>Id</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <!-- <th>Quantity</th>
+            <th>Total</th> -->
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of service.products">
+            <!-- <td><a (click)="remove(item.product.ProductId)">X/a></td> -->
+            <td>{{item.ProductId}}</td>
+            <td>{{item.ProductName}}</td>
+            <td>{{item.Image}}</td>
+            <td>{{item.Price}}</td>
+            <!-- <td>{{item.Quantity}}</td>
+            <td>{{item.product.Price*item.Quantity}}</td> -->
+        </tr>
+    </tbody>
+</table>
+
+
